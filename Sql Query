@@ -1,0 +1,19 @@
+select post.*,
+c1.id as comment1_id, c1.content as comment1,
+c2.id as comment2_id, c2.content as comment2,
+c3.id as comment3_id, c3.content as comment3,
+c4.id as comment4_id, c4.content as comment4,
+c5.id as comment5_id, c5.content as comment5,
+c6.id as comment6_id, c6.content as comment6,
+c7.id as comment7_id, c7.content as comment7,
+c8.id as comment8_id, c8.content as comment8,
+c9.id as comment9_id, c9.content as comment9,
+c10.id as comment10_id, c10.content as comment10
+
+from post as P
+
+LEFT JOIN comment as c.postid = p.id
+WHERE author.name = 'James Bond'
+GROUP BY p.id
+ORDER BY p.id
+LIMIT 0,10
